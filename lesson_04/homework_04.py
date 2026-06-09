@@ -136,3 +136,6 @@ last_sentence = adwentures_of_tom_sawer_sentences[-1]
 word_count = len(last_sentence.split())
 
 print(word_count)
+
+
+
