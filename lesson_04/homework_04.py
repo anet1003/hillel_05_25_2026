@@ -45,19 +45,20 @@ print(adwentures_of_tom_sawer)
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
 
-adwentures_of_tom_sawer = adwentures_of_tom_sawer.count("h")
-print(adwentures_of_tom_sawer)
+h_count = adwentures_of_tom_sawer.count("h")
+print(h_count)
 
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
 
-counter = 0
-adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
+adwentures = adwentures_of_tom_sawer.split()
 
-for word in adwentures_of_tom_sawer:
+counter = 0
+
+for word in adwentures:
     if word[0].isupper():
-        counter += 1
+        counter = counter + 1
 
 print(counter)
 
@@ -65,49 +66,57 @@ print(counter)
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
 
-adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
+adwentures = adwentures_of_tom_sawer.split()
+
 counter = 0
-for i, word in enumerate(adwentures_of_tom_sawer):
+
+for i, word in enumerate(adwentures):
     if word == "Tom":
-        counter += 1
+        counter = counter + 1
 
         if counter == 2:
             print(i)
             break
 
 
+
 # task 07
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = [
-    " ".join(sentence.split())
-    for sentence in adwentures_of_tom_sawer.replace("....", " ").split(".")
-    if sentence.strip()
-]
+adwentures_of_tom = adwentures_of_tom_sawer.replace("....", " ")
+adwentures = adwentures_of_tom.split(".")
 
-print(adwentures_of_tom_sawer_sentences)
+sentences = []
+
+for sentence in adwentures:
+    clean_sentence = " ".join(sentence.split())
+    if clean_sentence:
+        sentences.append(clean_sentence)
+
+print(sentences)
 
 # task 08
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
 
-adwentures_of_tom_sawer_sentences = [
+adwentures = [
     " ".join(sentence.split())
     for sentence in adwentures_of_tom_sawer.replace("....", " ").split(".")
     if sentence.strip()
 ]
 
-sentence = adwentures_of_tom_sawer_sentences[3].lower()
+sentence = adwentures[3].lower()
 print(sentence)
+
 
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
 """
 
-adwentures_of_tom_sawer_sentences = [
+adwentures = [
     " ".join(sentence.split())
     for sentence in adwentures_of_tom_sawer.replace("....", " ").split(".")
     if sentence.strip()
@@ -115,7 +124,7 @@ adwentures_of_tom_sawer_sentences = [
 
 found = False
 
-for sentence in adwentures_of_tom_sawer_sentences:
+for sentence in adwentures:
     if sentence.startswith("By the time"):
         found = True
         break
@@ -126,13 +135,13 @@ print(found)
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-adwentures_of_tom_sawer_sentences = [
+adwentures = [
     " ".join(sentence.split())
     for sentence in adwentures_of_tom_sawer.replace("....", " ").split(".")
     if sentence.strip()
 ]
 
-last_sentence = adwentures_of_tom_sawer_sentences[-1]
+last_sentence = adwentures[-1]
 word_count = len(last_sentence.split())
 
 print(word_count)
