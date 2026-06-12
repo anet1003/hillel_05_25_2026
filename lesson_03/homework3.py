@@ -142,4 +142,3 @@ print(f"Потрібно бензину: {total_fuel} л")
 
 refuels = round(int(total_fuel / tank_volume))
 print(f"Мінімальна кількість заправок: {refuels}")
-
