@@ -24,3 +24,5 @@ my_student.show_info()
 my_student.change_rating(55)
 my_student.show_info()
 
+
+
