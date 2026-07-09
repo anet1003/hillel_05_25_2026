@@ -1,6 +1,3 @@
-from tkinter.font import names
-
-
 class Rhombus:
 
     def __init__(self, side_a, corner_a):
