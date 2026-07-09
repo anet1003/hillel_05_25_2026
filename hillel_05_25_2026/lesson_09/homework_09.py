@@ -26,3 +26,6 @@ print(r.side_a)
 print(r.corner_a)
 print(r.corner_b)
 
+
+
+
