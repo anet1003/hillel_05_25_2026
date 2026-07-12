@@ -32,6 +32,9 @@ class TeamLead(Manager, Developer):
 
 
 lead = TeamLead("Alex", 5000, "IT", "python", 10)
+print(lead.name)
+print(lead.salary)
+print(lead.department)
+print(lead.programming_language)
 print(lead.team_size)
-
 
