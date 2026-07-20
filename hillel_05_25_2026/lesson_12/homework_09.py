@@ -21,7 +21,7 @@ class Rhombus:
             super().__setattr__(name, value)
 
 
-r = Rhombus(15,50)
+r = Rhombus(20,70)
 print(r.side_a)
 print(r.corner_a)
 print(r.corner_b)

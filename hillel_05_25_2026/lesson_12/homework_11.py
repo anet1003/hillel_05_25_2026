@@ -18,3 +18,5 @@ class Numera:
 
     for item in numbers:
         print(sum_numbers(item))
+
+
